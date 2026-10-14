@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <!-- на верхнем витке змея проходит перед стволом -->
+    <mask id="trunk"><rect width="24" height="24" fill="#fff"/><path d="M19 17C19 14 5 15 5 12.6" stroke="#000" stroke-width="4.4"/></mask>
+    <!-- на нижнем — позади ствола -->
+    <mask id="body"><rect width="24" height="24" fill="#fff"/><path d="M12 18.2V21.2" stroke="#000" stroke-width="3.8" stroke-linecap="butt"/></mask>
+  </defs>
+  <!-- дерево -->
+  <path d="M12 22.5V4.2M12 9.4 8.2 5.2M12 7.6 16.6 4.8" stroke-width="1.5" mask="url(#trunk)"/>
+  <g fill="currentColor" stroke="none">
+    <circle cx="12" cy="2.7" r="1.65"/><circle cx="7.3" cy="4.2" r="1.65"/><circle cx="17.7" cy="4.1" r="1.65"/>
+  </g>
+  <!-- змея: тело, голова (вид сверху), язык -->
+  <path d="M5 22C5 19.5 19 20 19 17C19 14 5 15 5 13" stroke-width="2.1" mask="url(#body)"/>
+  <path d="M5 7.8C6.5 7.8 7.1 9 6.8 10.4 6.5 11.7 5.8 12.4 5 13.4 4.2 12.4 3.5 11.7 3.2 10.4 2.9 9 3.5 7.8 5 7.8Z" fill="currentColor" stroke="none"/>
+  <path d="M5 7.6V6.6M5 6.6 4.3 5.8M5 6.6 5.7 5.8" stroke-width="1"/>
+</svg>
