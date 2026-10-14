@@ -5,6 +5,11 @@
   "version": "0.1.0",
   "publisher": "20xic",
   "license": "MIT",
+  "icon": "resources/icon.png",
+  "galleryBanner": {
+    "color": "#1f3a2b",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/20xic/TreeSnake.VSCODE.git"
@@ -12,8 +17,16 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Other"],
-  "keywords": ["llm", "context", "prompt", "xml", "clipboard"],
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "llm",
+    "context",
+    "prompt",
+    "xml",
+    "clipboard"
+  ],
   "main": "./out/extension.js",
   "activationEvents": [],
   "contributes": {
@@ -42,43 +55,143 @@
       }
     ],
     "commands": [
-      { "command": "treesnake.copyLlm", "title": "Copy Selection as LLM", "category": "TreeSnake", "icon": "$(copy)" },
-      { "command": "treesnake.copyXml", "title": "Copy Selection as XML", "category": "TreeSnake", "icon": "$(code)" },
-      { "command": "treesnake.save", "title": "Save Selection to File...", "category": "TreeSnake", "icon": "$(save)" },
-      { "command": "treesnake.refresh", "title": "Refresh", "category": "TreeSnake", "icon": "$(refresh)" },
-      { "command": "treesnake.selectAll", "title": "Select All", "category": "TreeSnake", "icon": "$(check-all)" },
-      { "command": "treesnake.clearSelection", "title": "Clear Selection", "category": "TreeSnake", "icon": "$(clear-all)" },
-      { "command": "treesnake.explorer.copyLlm", "title": "Copy as LLM", "category": "TreeSnake" },
-      { "command": "treesnake.explorer.copyXml", "title": "Copy as XML", "category": "TreeSnake" },
-      { "command": "treesnake.explorer.save", "title": "Save to File...", "category": "TreeSnake" },
-      { "command": "treesnake.explorer.addToSelection", "title": "Add to Selection", "category": "TreeSnake" }
+      {
+        "command": "treesnake.copyLlm",
+        "title": "Copy Selection as LLM",
+        "category": "TreeSnake",
+        "icon": "$(copy)"
+      },
+      {
+        "command": "treesnake.copyXml",
+        "title": "Copy Selection as XML",
+        "category": "TreeSnake",
+        "icon": "$(code)"
+      },
+      {
+        "command": "treesnake.save",
+        "title": "Save Selection to File...",
+        "category": "TreeSnake",
+        "icon": "$(save)"
+      },
+      {
+        "command": "treesnake.refresh",
+        "title": "Refresh",
+        "category": "TreeSnake",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "treesnake.selectAll",
+        "title": "Select All",
+        "category": "TreeSnake",
+        "icon": "$(check-all)"
+      },
+      {
+        "command": "treesnake.clearSelection",
+        "title": "Clear Selection",
+        "category": "TreeSnake",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "treesnake.explorer.copyLlm",
+        "title": "Copy as LLM",
+        "category": "TreeSnake"
+      },
+      {
+        "command": "treesnake.explorer.copyXml",
+        "title": "Copy as XML",
+        "category": "TreeSnake"
+      },
+      {
+        "command": "treesnake.explorer.save",
+        "title": "Save to File...",
+        "category": "TreeSnake"
+      },
+      {
+        "command": "treesnake.explorer.addToSelection",
+        "title": "Add to Selection",
+        "category": "TreeSnake"
+      }
     ],
     "submenus": [
-      { "id": "treesnake.explorerMenu", "label": "TreeSnake" }
+      {
+        "id": "treesnake.explorerMenu",
+        "label": "TreeSnake"
+      }
     ],
     "menus": {
       "view/title": [
-        { "command": "treesnake.copyLlm", "when": "view == treesnake.files", "group": "navigation@1" },
-        { "command": "treesnake.copyXml", "when": "view == treesnake.files", "group": "navigation@2" },
-        { "command": "treesnake.save", "when": "view == treesnake.files", "group": "navigation@3" },
-        { "command": "treesnake.refresh", "when": "view == treesnake.files", "group": "navigation@4" },
-        { "command": "treesnake.selectAll", "when": "view == treesnake.files", "group": "selection@1" },
-        { "command": "treesnake.clearSelection", "when": "view == treesnake.files", "group": "selection@2" }
+        {
+          "command": "treesnake.copyLlm",
+          "when": "view == treesnake.files",
+          "group": "navigation@1"
+        },
+        {
+          "command": "treesnake.copyXml",
+          "when": "view == treesnake.files",
+          "group": "navigation@2"
+        },
+        {
+          "command": "treesnake.save",
+          "when": "view == treesnake.files",
+          "group": "navigation@3"
+        },
+        {
+          "command": "treesnake.refresh",
+          "when": "view == treesnake.files",
+          "group": "navigation@4"
+        },
+        {
+          "command": "treesnake.selectAll",
+          "when": "view == treesnake.files",
+          "group": "selection@1"
+        },
+        {
+          "command": "treesnake.clearSelection",
+          "when": "view == treesnake.files",
+          "group": "selection@2"
+        }
       ],
       "explorer/context": [
-        { "submenu": "treesnake.explorerMenu", "group": "6_copypath@99" }
+        {
+          "submenu": "treesnake.explorerMenu",
+          "group": "6_copypath@99"
+        }
       ],
       "treesnake.explorerMenu": [
-        { "command": "treesnake.explorer.copyLlm", "group": "1_copy@1" },
-        { "command": "treesnake.explorer.copyXml", "group": "1_copy@2" },
-        { "command": "treesnake.explorer.save", "group": "1_copy@3" },
-        { "command": "treesnake.explorer.addToSelection", "group": "2_select@1" }
+        {
+          "command": "treesnake.explorer.copyLlm",
+          "group": "1_copy@1"
+        },
+        {
+          "command": "treesnake.explorer.copyXml",
+          "group": "1_copy@2"
+        },
+        {
+          "command": "treesnake.explorer.save",
+          "group": "1_copy@3"
+        },
+        {
+          "command": "treesnake.explorer.addToSelection",
+          "group": "2_select@1"
+        }
       ],
       "commandPalette": [
-        { "command": "treesnake.explorer.copyLlm", "when": "false" },
-        { "command": "treesnake.explorer.copyXml", "when": "false" },
-        { "command": "treesnake.explorer.save", "when": "false" },
-        { "command": "treesnake.explorer.addToSelection", "when": "false" }
+        {
+          "command": "treesnake.explorer.copyLlm",
+          "when": "false"
+        },
+        {
+          "command": "treesnake.explorer.copyXml",
+          "when": "false"
+        },
+        {
+          "command": "treesnake.explorer.save",
+          "when": "false"
+        },
+        {
+          "command": "treesnake.explorer.addToSelection",
+          "when": "false"
+        }
       ]
     },
     "configuration": {
@@ -86,20 +199,45 @@
       "properties": {
         "treesnake.excludeDirs": {
           "type": "array",
-          "items": { "type": "string" },
-          "default": [".git", "node_modules", "venv", ".venv", "__pycache__", ".idea", ".vs"],
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            ".git",
+            "node_modules",
+            "venv",
+            ".venv",
+            "__pycache__",
+            ".idea",
+            ".vs"
+          ],
           "markdownDescription": "Directories to hide and skip. Exact name, glob (`*.egg-info`) or regex (`re:^\\..*`). Matched against the bare name at every level, like the `treesnake` CLI."
         },
         "treesnake.excludeFiles": {
           "type": "array",
-          "items": { "type": "string" },
-          "default": ["*.pyc", "*.exe", "*.dll", "*.so", "*.dylib", ".DS_Store"],
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "*.pyc",
+            "*.exe",
+            "*.dll",
+            "*.so",
+            "*.dylib",
+            ".DS_Store"
+          ],
           "markdownDescription": "Files to hide and skip. Same pattern syntax as `#treesnake.excludeDirs#`."
         },
         "treesnake.excludeContentFiles": {
           "type": "array",
-          "items": { "type": "string" },
-          "default": ["*.lock", "package-lock.json", "*.log"],
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "*.lock",
+            "package-lock.json",
+            "*.log"
+          ],
           "markdownDescription": "Files that are listed in the output but without their content."
         },
         "treesnake.useGitignore": {
@@ -108,13 +246,19 @@
           "markdownDescription": "Merge patterns from the workspace folder's root `.gitignore` into the exclusions (same subset of gitignore syntax as the CLI: no negations, no paths with an inner `/`)."
         },
         "treesnake.maxFileSize": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "default": 1048576,
           "markdownDescription": "Files larger than this (bytes) get a `[File too large: N bytes]` placeholder instead of their content. `null` disables the limit."
         },
         "treesnake.defaultFormat": {
           "type": "string",
-          "enum": ["llm", "xml"],
+          "enum": [
+            "llm",
+            "xml"
+          ],
           "default": "llm",
           "markdownDescription": "Format used by **Save Selection to File...** when none is picked."
         }
@@ -133,5 +277,9 @@
     "@types/vscode": "^1.85.0",
     "@vscode/vsce": "^3.2.0",
     "typescript": "^5.6.0"
+  },
+  "homepage": "https://github.com/20xic/TreeSnake.VSCODE#readme",
+  "bugs": {
+    "url": "https://github.com/20xic/TreeSnake.VSCODE/issues"
   }
 }
